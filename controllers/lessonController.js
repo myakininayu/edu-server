@@ -1,9 +1,9 @@
-const {Lesson} = require('../models/models');
+const {Content} = require('../models/models');
 
 class LessonController{
     async getDataLesson(req, res){
-        const lessons = await Lesson.findAll();
-        return res.json(lessons);
+        const content = await Content.findAll();
+        return res.json(content);
     }
 }
 

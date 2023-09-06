@@ -8,7 +8,7 @@ const {DataTypes} = require('sequelize');
     text:{type: DataTypes.STRING}
 })*/
 
-const Subject = sequelize.define('subject', {
+/* const Subject = sequelize.define('subject', {
     id:{type:DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name:{type: DataTypes.STRING}
 })
@@ -55,4 +55,17 @@ module.exports = {
     Text,
     Picture
 
+}*/
+
+
+const Content = sequelize.define('content', {
+    id:{type:DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    course:{type: DataTypes.STRING},
+    type:{type: DataTypes.STRING},
+    text:{type: DataTypes.STRING},
+    image:{type: DataTypes.STRING}
+})
+
+module.exports = {
+    Content
 }
