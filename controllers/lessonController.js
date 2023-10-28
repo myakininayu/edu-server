@@ -18,6 +18,18 @@ class LessonController{
         const content = await Content.create({course, type, text, image})
         return res.json(content);
     }
+
+    async updateContent(req, res){
+        const { course, type, text, image } = req.body;
+        const idContent = req.query.id;
+
+        const content = await Content.update({course, type, text, image}, {
+            where: {
+                id: idContent,
+            },
+        })
+        return res.json(content);
+    }
 }
 
 module.exports = new LessonController();
