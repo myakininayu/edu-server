@@ -1,4 +1,5 @@
 const {Content} = require('../models/models');
+const {where} = require("sequelize");
 
 
 class LessonController{
@@ -30,6 +31,14 @@ class LessonController{
         })
         return res.json(content);
     }
+    async deleteContent(req, res) {
+        const idContent = req.query.id;
+        const content = await Content.destroy({
+            where: {
+                id: idContent
+            }
+        });
+        res.json({message:"Запись успешно удалена"});
+    }
 }
-
 module.exports = new LessonController();
