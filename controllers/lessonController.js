@@ -33,12 +33,12 @@ class LessonController{
     }
     async deleteContent(req, res) {
         const idContent = req.query.id;
-        const content = await Content.destroy({
+        await Content.destroy({
             where: {
                 id: idContent
             }
         });
-        res.json({message:"Запись успешно удалена"});
+        res.json({message:"Delete successful"});
     }
 }
 module.exports = new LessonController();
