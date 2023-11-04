@@ -5,7 +5,6 @@ const router = require('./routes/index');
 const bodyParser = require('body-parser');
 
 const PORT = 5000;
-
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -21,6 +20,5 @@ const start = async () => {
         console.log(e);
     }
 }
-
 
 start();
