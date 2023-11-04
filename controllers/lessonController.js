@@ -1,5 +1,4 @@
 const {Content} = require('../models/models');
-const {where} = require("sequelize");
 
 
 class LessonController{
