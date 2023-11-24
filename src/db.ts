@@ -1,6 +1,6 @@
-const {Sequelize} = require('sequelize');
+import { Sequelize } from 'sequelize';
 
-module.exports = new Sequelize(
+const sequelize = new Sequelize(
     "edu",
     "root",
     "1234",
@@ -10,3 +10,5 @@ module.exports = new Sequelize(
         port: 3306
     }
 )
+
+export default sequelize;
