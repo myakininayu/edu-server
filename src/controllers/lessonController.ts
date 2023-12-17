@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
-import Content from '../models/models.ts';
+import { Content } from '../models/models.ts';
 
 class LessonController {
+
   async getDataLesson(req: Request, res: Response): Promise<Response> {
     const content = await Content.findAll();
     return res.json(content);
